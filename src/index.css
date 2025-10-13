@@ -1,1 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
+
+:root {
+    --carbon-black: #0D1117;
+    --electric-blue: #00BFFF;
+    --neon-teal: #00FFC6;
+    --smoke-gray: #A9B2BA;
+    --error-red: #FF4D4D;
+    --dark-surface: #161b22;
+    --border-color: #2d3748;
+}
+
+
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--carbon-black);
+    color: var(--smoke-gray);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Enhanced Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+.font-tech {
+    font-family: 'Orbitron', 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+/* Original Glitch Effect */
+.glitch {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    animation: glitch-1 0.5s infinite;
+    color: var(--electric-blue);
+    z-index: -1;
+}
+
+.glitch::after {
+    animation: glitch-2 0.5s infinite;
+    color: var(--neon-teal);
+    z-index: -2;
+}
+
+@keyframes glitch-1 {
+
+    0%,
+    14%,
+    15%,
+    49%,
+    50%,
+    99%,
+    100% {
+        transform: translate(0);
+    }
+
+    15%,
+    49% {
+        transform: translate(-2px, 1px);
+    }
+}
+
+@keyframes glitch-2 {
+
+    0%,
+    20%,
+    21%,
+    62%,
+    63%,
+    99%,
+    100% {
+        transform: translate(0);
+    }
+
+    21%,
+    62% {
+        transform: translate(2px, -1px);
+    }
+}
+
+/* Enhanced Neon Effects */
+.neon-glow {
+    box-shadow:
+        0 0 5px var(--electric-blue),
+        0 0 10px var(--electric-blue),
+        0 0 15px var(--electric-blue),
+        0 0 20px var(--electric-blue);
+    animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+.neon-border {
+    border: 1px solid var(--electric-blue);
+    box-shadow:
+        inset 0 0 10px var(--electric-blue),
+        0 0 10px var(--electric-blue);
+}
+
+@keyframes neon-pulse {
+    from {
+        box-shadow:
+            0 0 5px var(--electric-blue),
+            0 0 10px var(--electric-blue),
+            0 0 15px var(--electric-blue),
+            0 0 20px var(--electric-blue);
+    }
+
+    to {
+        box-shadow:
+            0 0 2px var(--electric-blue),
+            0 0 5px var(--electric-blue),
+            0 0 8px var(--electric-blue),
+            0 0 12px var(--electric-blue);
+    }
+}
+
+/* Enhanced Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, var(--electric-blue) 0%, var(--neon-teal) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+/* Tech-style animations */
+@keyframes matrix-rain {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes data-flow {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes scan-line {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Enhanced button styles */
+.btn-tech {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, var(--electric-blue), var(--neon-teal));
+    border: none;
+    color: var(--carbon-black);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+.btn-tech::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-tech:hover::before {
+    left: 100%;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--carbon-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--electric-blue), var(--neon-teal));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--neon-teal), var(--electric-blue));
+}
+
+/* Selection styling */
+::selection {
+    background: var(--electric-blue);
+    color: var(--carbon-black);
+}
+
+::-moz-selection {
+    background: var(--electric-blue);
+    color: var(--carbon-black);
+}
+
+/* Enhanced focus states */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--electric-blue);
+    outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes loading-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: loading-pulse 1.5s ease-in-out infinite;
+}
+
+/* Particle animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Tech grid background */
+.tech-grid {
+    background-image:
+        linear-gradient(rgba(0, 191, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 191, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
