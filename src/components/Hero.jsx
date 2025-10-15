@@ -84,19 +84,35 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* Single powerful CTA */}
+        {/* Techy Dark Button */}
         <div className="space-y-6">
           <button 
             onClick={() => navigate('/contact')}
-            className="group relative px-12 py-6 bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] text-[#0D1117] font-bold text-xl rounded-2xl neon-glow transition-all duration-500 transform hover:scale-110 overflow-hidden"
+            className="group relative px-10 py-5 bg-[#0D1117] text-[#00BFFF] font-mono font-bold text-lg uppercase tracking-widest border-2 border-[#00BFFF]/30 transition-all duration-500 hover:border-[#00BFFF] hover:text-[#00FFC6] hover:shadow-2xl hover:shadow-[#00BFFF]/30 transform hover:scale-105 overflow-hidden"
+            style={{
+              clipPath: 'polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%)'
+            }}
           >
-            <span className="relative z-10 flex items-center gap-3">
+            {/* Animated scan line */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00BFFF]/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+            
+            {/* Corner brackets */}
+            <div className="absolute top-2 left-6 w-3 h-3 border-t-2 border-l-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute top-2 right-6 w-3 h-3 border-t-2 border-r-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute bottom-2 left-6 w-3 h-3 border-b-2 border-l-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute bottom-2 right-6 w-3 h-3 border-b-2 border-r-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            {/* Button text */}
+            <span className="relative z-10 flex items-center justify-center">
+              <span className="mr-3">&gt;</span>
               Start Your Project
-              <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
+              <span className="ml-3">&lt;</span>
             </span>
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+            
+            {/* Glitch effect overlay */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <div className="absolute inset-0 bg-[#00BFFF]/5 animate-pulse"></div>
+            </div>
           </button>
         </div>
       </div>
