@@ -66,62 +66,63 @@ const TechnologiesSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 font-['Space_Grotesk'] leading-none">
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-6 md:mb-8 font-['Space_Grotesk'] leading-none px-4">
             Our <span className="bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] bg-clip-text text-transparent">Tech Stack</span>
           </h2>
-          <p className="text-xl md:text-2xl text-[#A9B2BA] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl text-[#A9B2BA] max-w-3xl mx-auto leading-relaxed px-4">
             Cutting-edge technologies and tools we use to build exceptional digital solutions
           </p>
         </div>
 
         {/* Category Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12 md:mb-16 px-4">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
+              className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg md:rounded-xl font-bold text-sm sm:text-base md:text-lg transition-all duration-300 transform hover:scale-105 ${
                 activeCategory === category
                   ? 'bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] text-[#0D1117]'
                   : 'bg-[#161b22] text-[#A9B2BA] hover:bg-[#2d3748] hover:text-[#00FFC6] border border-[#2d3748]'
               }`}
             >
-              {technologies[category].title}
+              <span className="hidden sm:inline">{technologies[category].title}</span>
+              <span className="sm:hidden">{technologies[category].title.split(' ')[0]}</span>
             </button>
           ))}
         </div>
 
         {/* Active Category Content */}
-        <div className="bg-[#161b22] rounded-3xl p-8 md:p-12 border border-[#2d3748]">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 font-['Space_Grotesk']">
+        <div className="bg-[#161b22] rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 border border-[#2d3748]">
+          <div className="text-center mb-8 md:mb-12">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4 font-['Space_Grotesk'] px-4">
               {technologies[activeCategory].title}
             </h3>
-            <p className="text-lg text-[#A9B2BA] max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-[#A9B2BA] max-w-2xl mx-auto px-4">
               {technologies[activeCategory].description}
             </p>
           </div>
 
           {/* Technologies Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {technologies[activeCategory].techs.map((tech, index) => (
               <div
                 key={index}
-                className="group p-6 bg-[#0D1117] rounded-xl border border-[#2d3748] hover:border-[#00BFFF] transition-all duration-300 transform hover:scale-105"
+                className="group p-4 md:p-6 bg-[#0D1117] rounded-lg md:rounded-xl border border-[#2d3748] hover:border-[#00BFFF] transition-all duration-300 transform hover:scale-105"
               >
                 {/* Tech Icon and Name */}
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="text-3xl transform group-hover:scale-110 transition-transform duration-300">
+                <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                  <div className="text-2xl md:text-3xl transform group-hover:scale-110 transition-transform duration-300">
                     {tech.icon}
                   </div>
-                  <h4 className="text-xl font-bold text-white group-hover:text-[#00BFFF] transition-colors duration-300">
+                  <h4 className="text-lg md:text-xl font-bold text-white group-hover:text-[#00BFFF] transition-colors duration-300">
                     {tech.name}
                   </h4>
                 </div>
 
                 {/* Description */}
-                <p className="text-[#A9B2BA] text-sm leading-relaxed">
+                <p className="text-[#A9B2BA] text-xs md:text-sm leading-relaxed">
                   {tech.description}
                 </p>
 
@@ -135,18 +136,18 @@ const TechnologiesSection = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-          <div className="text-center p-6 bg-[#161b22] rounded-xl border border-[#2d3748]">
-            <div className="text-3xl font-bold text-[#00BFFF] mb-2">50+</div>
-            <div className="text-[#A9B2BA]">Technologies Mastered</div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 mt-12 md:mt-16">
+          <div className="text-center p-4 md:p-6 bg-[#161b22] rounded-lg md:rounded-xl border border-[#2d3748]">
+            <div className="text-2xl md:text-3xl font-bold text-[#00BFFF] mb-1 md:mb-2">50+</div>
+            <div className="text-[#A9B2BA] text-sm md:text-base">Technologies Mastered</div>
           </div>
-          <div className="text-center p-6 bg-[#161b22] rounded-xl border border-[#2d3748]">
-            <div className="text-3xl font-bold text-[#00FFC6] mb-2">24/7</div>
-            <div className="text-[#A9B2BA]">Learning & Adapting</div>
+          <div className="text-center p-4 md:p-6 bg-[#161b22] rounded-lg md:rounded-xl border border-[#2d3748]">
+            <div className="text-2xl md:text-3xl font-bold text-[#00FFC6] mb-1 md:mb-2">24/7</div>
+            <div className="text-[#A9B2BA] text-sm md:text-base">Learning & Adapting</div>
           </div>
-          <div className="text-center p-6 bg-[#161b22] rounded-xl border border-[#2d3748]">
-            <div className="text-3xl font-bold text-[#00BFFF] mb-2">100%</div>
-            <div className="text-[#A9B2BA]">Modern Standards</div>
+          <div className="text-center p-4 md:p-6 bg-[#161b22] rounded-lg md:rounded-xl border border-[#2d3748]">
+            <div className="text-2xl md:text-3xl font-bold text-[#00BFFF] mb-1 md:mb-2">100%</div>
+            <div className="text-[#A9B2BA] text-sm md:text-base">Modern Standards</div>
           </div>
         </div>
       </div>

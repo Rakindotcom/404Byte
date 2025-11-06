@@ -74,22 +74,22 @@ const ServicesSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-black text-white mb-8 font-['Space_Grotesk'] tracking-tight">
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 md:mb-8 font-['Space_Grotesk'] tracking-tight px-4">
             Our <span className="bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] bg-clip-text text-transparent">Services</span>
           </h2>
-          <p className="text-xl text-[#A9B2BA] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-[#A9B2BA] max-w-3xl mx-auto leading-relaxed px-4">
             End-to-end digital solutions designed to accelerate your business growth and digital transformation
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-20">
           {services.map((service) => (
             <div
               key={service.id}
               onClick={() => handleServiceClick(service.id)}
-              className={`group relative p-8 rounded-2xl border transition-all duration-500 cursor-pointer transform hover:scale-105 ${
+              className={`group relative p-4 sm:p-6 md:p-8 rounded-2xl border transition-all duration-500 cursor-pointer transform hover:scale-105 ${
                 hoveredCard === service.id
                   ? 'border-[#00BFFF] shadow-2xl shadow-[#00BFFF]/25 bg-[#1a1f2e]'
                   : 'border-[#2d3748] hover:border-[#00FFC6] bg-[#161b22]'
@@ -114,12 +114,12 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Category Title */}
-                <h3 className="text-xl font-bold text-white mb-4 font-['Space_Grotesk'] group-hover:text-[#00BFFF] transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3 md:mb-4 font-['Space_Grotesk'] group-hover:text-[#00BFFF] transition-colors duration-300">
                   {service.category}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[#A9B2BA] text-sm mb-6 leading-relaxed">
+                <p className="text-[#A9B2BA] text-xs sm:text-sm mb-4 md:mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
@@ -151,23 +151,23 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-[#161b22] to-[#1a1f2e] rounded-3xl p-12 border border-[#2d3748]">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Space_Grotesk']">
+        <div className="text-center bg-gradient-to-r from-[#161b22] to-[#1a1f2e] rounded-2xl md:rounded-3xl p-6 md:p-12 border border-[#2d3748]">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 font-['Space_Grotesk'] px-4">
             Ready to Transform Your Business?
           </h3>
-          <p className="text-lg text-[#A9B2BA] mb-8 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-[#A9B2BA] mb-6 md:mb-8 max-w-2xl mx-auto px-4">
             Let's discuss your project and create a custom solution that drives results
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
             <button 
               onClick={handleStartProject}
-              className="px-8 py-4 bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] text-[#0D1117] font-bold rounded-xl hover:shadow-2xl hover:shadow-[#00BFFF]/25 transition-all duration-300 transform hover:scale-105"
+              className="px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] text-[#0D1117] font-bold rounded-xl hover:shadow-2xl hover:shadow-[#00BFFF]/25 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Project
             </button>
             <button 
               onClick={() => navigate('/portfolio')}
-              className="px-8 py-4 border-2 border-[#00FFC6] text-[#00FFC6] font-bold rounded-xl hover:bg-[#00FFC6] hover:text-[#0D1117] transition-all duration-300 transform hover:scale-105"
+              className="px-6 md:px-8 py-3 md:py-4 border-2 border-[#00FFC6] text-[#00FFC6] font-bold rounded-xl hover:bg-[#00FFC6] hover:text-[#0D1117] transition-all duration-300 transform hover:scale-105"
             >
               View Our Work
             </button>

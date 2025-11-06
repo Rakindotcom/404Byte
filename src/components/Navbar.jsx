@@ -22,16 +22,16 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#0D1117]/95 backdrop-blur-md border-b border-[#2d3748]/50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex justify-between items-center h-14 sm:h-16">
           {/* Logo */}
           <button onClick={() => handleNavigation('/')} className="flex items-center group">
             <img
               src="/logo.png"
               alt="404Byte Logo"
-              className="w-10 h-10 mr-3 transform group-hover:rotate-12 transition-transform duration-300"
+              className="w-8 h-8 sm:w-10 sm:h-10 mr-2 sm:mr-3 transform group-hover:rotate-12 transition-transform duration-300"
             />
-            <span className="text-2xl font-black font-['Space_Grotesk'] text-white group-hover:text-[#00BFFF] transition-colors duration-300">
+            <span className="text-lg sm:text-xl md:text-2xl font-black font-['Space_Grotesk'] text-white group-hover:text-[#00BFFF] transition-colors duration-300">
               404Byte
             </span>
           </button>
@@ -78,9 +78,9 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.path)}
-                className={`block w-full text-left py-3 text-sm font-semibold transition-colors duration-300 ${location.pathname === item.path
-                  ? 'text-[#00BFFF]'
-                  : 'text-[#A9B2BA] hover:text-[#00FFC6]'
+                className={`block w-full text-left py-3 px-2 text-base font-semibold transition-colors duration-300 rounded-lg ${location.pathname === item.path
+                  ? 'text-[#00BFFF] bg-[#00BFFF]/10'
+                  : 'text-[#A9B2BA] hover:text-[#00FFC6] hover:bg-[#00FFC6]/5'
                   }`}
               >
                 {item.name}

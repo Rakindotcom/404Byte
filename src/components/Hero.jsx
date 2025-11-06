@@ -58,16 +58,16 @@ const Hero = () => {
       {/* Main content */}
       <div className={`text-center z-10 max-w-5xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         {/* Logo */}
-        <div className="mb-8">
+        <div className="mb-6 md:mb-8">
           <img 
             src="/logo.png" 
             alt="404Byte Logo" 
-            className="w-24 h-24 mx-auto mb-6 transform hover:rotate-12 transition-transform duration-500"
+            className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-4 md:mb-6 transform hover:rotate-12 transition-transform duration-500"
           />
         </div>
 
         {/* Brand Name */}
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 font-['JetBrains_Mono']">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 font-['JetBrains_Mono']">
           <span 
             className="glitch text-white hover:text-[#00BFFF] transition-colors duration-300 cursor-default"
             data-text="404Byte"
@@ -77,30 +77,30 @@ const Hero = () => {
         </h1>
 
         {/* Animated tagline */}
-        <div className="h-16 mb-12">
-          <p className="text-2xl md:text-4xl text-[#A9B2BA] font-['Poppins'] font-light">
+        <div className="h-12 sm:h-14 md:h-16 mb-8 md:mb-12">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-[#A9B2BA] font-['Poppins'] font-light px-4">
             <span className="text-[#00FFC6]">{currentText}</span>
             <span className="animate-pulse text-[#00BFFF]">|</span>
           </p>
         </div>
 
         {/* Techy Dark Button */}
-        <div className="space-y-6">
+        <div className="space-y-6 px-4">
           <button 
             onClick={() => navigate('/contact')}
-            className="group relative px-10 py-5 bg-[#0D1117] text-[#00BFFF] font-mono font-bold text-lg uppercase tracking-widest border-2 border-[#00BFFF]/30 transition-all duration-500 hover:border-[#00BFFF] hover:text-[#00FFC6] hover:shadow-2xl hover:shadow-[#00BFFF]/30 transform hover:scale-105 overflow-hidden"
+            className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-[#0D1117] text-[#00BFFF] font-mono font-bold text-sm sm:text-base md:text-lg uppercase tracking-widest border-2 border-[#00BFFF]/30 transition-all duration-500 hover:border-[#00BFFF] hover:text-[#00FFC6] hover:shadow-2xl hover:shadow-[#00BFFF]/30 transform hover:scale-105 overflow-hidden"
             style={{
-              clipPath: 'polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%)'
+              clipPath: 'polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)'
             }}
           >
             {/* Animated scan line */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00BFFF]/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
             
             {/* Corner brackets */}
-            <div className="absolute top-2 left-6 w-3 h-3 border-t-2 border-l-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute top-2 right-6 w-3 h-3 border-t-2 border-r-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute bottom-2 left-6 w-3 h-3 border-b-2 border-l-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute bottom-2 right-6 w-3 h-3 border-b-2 border-r-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute top-1 left-3 sm:top-2 sm:left-4 md:left-6 w-2 h-2 sm:w-3 sm:h-3 border-t-2 border-l-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute top-1 right-3 sm:top-2 sm:right-4 md:right-6 w-2 h-2 sm:w-3 sm:h-3 border-t-2 border-r-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute bottom-1 left-3 sm:bottom-2 sm:left-4 md:left-6 w-2 h-2 sm:w-3 sm:h-3 border-b-2 border-l-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute bottom-1 right-3 sm:bottom-2 sm:right-4 md:right-6 w-2 h-2 sm:w-3 sm:h-3 border-b-2 border-r-2 border-[#00FFC6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             
             {/* Button text */}
             <span className="relative z-10 flex items-center justify-center">
