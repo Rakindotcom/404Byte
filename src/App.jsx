@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import LoadingAnimation from './components/LoadingAnimation'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -12,6 +14,16 @@ import NotFound from './pages/NotFound'
 
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false)
+  }
+
+  if (isLoading) {
+    return <LoadingAnimation onComplete={handleLoadingComplete} />
+  }
+
   return (
     <Router>
       <div className="min-h-screen bg-[#0D1117]">

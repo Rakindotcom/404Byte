@@ -462,3 +462,133 @@ n Tech Button Animations */
 .modern-glitch:hover {
     animation: modern-glitch 0.3s ease-in-out;
 }
+/* H
+orizontal Slide Animations */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* Slide Navigation Animations */
+.slide-nav-dot {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-nav-dot:hover {
+    transform: scale(1.2);
+}
+
+.slide-nav-arrow {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-nav-arrow:hover {
+    transform: scale(1.1);
+}
+
+.slide-nav-arrow:active {
+    transform: scale(0.95);
+}
+
+/* Smooth slide transitions */
+.slide-container {
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Progress bar animation */
+.slide-progress {
+    transition: width 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slide counter animation */
+.slide-counter {
+    font-variant-numeric: tabular-nums;
+    transition: all 0.3s ease;
+}
+
+/* Backdrop blur for navigation elements */
+.nav-backdrop {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Slide entrance animations */
+.slide-enter {
+    animation: slideInRight 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-enter-reverse {
+    animation: slideInLeft 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slide exit animations */
+.slide-exit {
+    animation: slideOutLeft 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-exit-reverse {
+    animation: slideOutRight 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Disable scroll on slide container */
+.slide-container-wrapper {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Custom scrollbar for individual slides */
+.slide-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.slide-content::-webkit-scrollbar-track {
+    background: rgba(13, 17, 23, 0.5);
+}
+
+.slide-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--electric-blue), var(--neon-teal));
+    border-radius: 3px;
+}
+
+.slide-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--neon-teal), var(--electric-blue));
+}

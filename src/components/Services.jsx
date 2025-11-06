@@ -8,7 +8,7 @@ const ServicesSection = () => {
       id: 1,
       category: "Digital Development",
       description: "Building scalable, modern digital solutions",
-      services: ["Web Development", "App Development", "SaaS"],
+      services: ["Web Development", "App Development", "SaaS", "POS Systems"],
       icon: "💻",
       color: "#00BFFF"
     },

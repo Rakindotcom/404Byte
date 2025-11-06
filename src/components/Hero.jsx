@@ -104,9 +104,7 @@ const Hero = () => {
             
             {/* Button text */}
             <span className="relative z-10 flex items-center justify-center">
-              <span className="mr-3">&gt;</span>
               Start Your Project
-              <span className="ml-3">&lt;</span>
             </span>
             
             {/* Glitch effect overlay */}

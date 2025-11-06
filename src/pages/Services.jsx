@@ -30,6 +30,11 @@ const Services = () => {
           name: "SaaS Solutions",
           description: "Cloud-based platforms and software solutions tailored to your business needs",
           features: ["Scalable Architecture", "Cloud Deployment", "API Integration", "User Management"]
+        },
+        {
+          name: "POS Systems",
+          description: "Complete point-of-sale solutions for retail and hospitality businesses with inventory management",
+          features: ["Payment Processing", "Inventory Management", "Sales Analytics", "Multi-location Support"]
         }
       ]
     },

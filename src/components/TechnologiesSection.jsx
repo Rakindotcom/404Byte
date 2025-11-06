@@ -8,48 +8,48 @@ const TechnologiesSection = () => {
       title: 'Frontend Development',
       description: 'Modern, responsive, and interactive user interfaces',
       techs: [
-        { name: 'React', level: 95, description: 'Component-based UI library' },
-        { name: 'Next.js', level: 90, description: 'Full-stack React framework' },
-        { name: 'Vue.js', level: 85, description: 'Progressive JavaScript framework' },
-        { name: 'TypeScript', level: 92, description: 'Typed JavaScript superset' },
-        { name: 'Tailwind CSS', level: 98, description: 'Utility-first CSS framework' },
-        { name: 'Three.js', level: 80, description: '3D graphics and animations' }
+        { name: 'React', description: 'Component-based UI library', icon: '⚛️' },
+        { name: 'Next.js', description: 'Full-stack React framework', icon: '🔺' },
+        { name: 'Vue.js', description: 'Progressive JavaScript framework', icon: '💚' },
+        { name: 'TypeScript', description: 'Typed JavaScript superset', icon: '📘' },
+        { name: 'Tailwind CSS', description: 'Utility-first CSS framework', icon: '🎨' },
+        { name: 'Three.js', description: '3D graphics and animations', icon: '🎲' }
       ]
     },
     backend: {
       title: 'Backend Development',
       description: 'Scalable server-side solutions and APIs',
       techs: [
-        { name: 'Node.js', level: 93, description: 'JavaScript runtime environment' },
-        { name: 'Python', level: 88, description: 'Versatile programming language' },
-        { name: 'PostgreSQL', level: 90, description: 'Advanced relational database' },
-        { name: 'MongoDB', level: 85, description: 'NoSQL document database' },
-        { name: 'GraphQL', level: 82, description: 'Query language for APIs' },
-        { name: 'Docker', level: 87, description: 'Containerization platform' }
+        { name: 'Node.js', description: 'JavaScript runtime environment', icon: '🟢' },
+        { name: 'Python', description: 'Versatile programming language', icon: '🐍' },
+        { name: 'PostgreSQL', description: 'Advanced relational database', icon: '🐘' },
+        { name: 'MongoDB', description: 'NoSQL document database', icon: '🍃' },
+        { name: 'GraphQL', description: 'Query language for APIs', icon: '🔗' },
+        { name: 'Docker', description: 'Containerization platform', icon: '🐳' }
       ]
     },
     mobile: {
       title: 'Mobile Development',
       description: 'Cross-platform and native mobile applications',
       techs: [
-        { name: 'React Native', level: 90, description: 'Cross-platform mobile framework' },
-        { name: 'Flutter', level: 85, description: 'Google\'s UI toolkit' },
-        { name: 'Swift', level: 80, description: 'iOS native development' },
-        { name: 'Kotlin', level: 78, description: 'Android native development' },
-        { name: 'Expo', level: 88, description: 'React Native development platform' },
-        { name: 'Firebase', level: 92, description: 'Backend-as-a-Service platform' }
+        { name: 'React Native', description: 'Cross-platform mobile framework', icon: '📱' },
+        { name: 'Flutter', description: 'Google\'s UI toolkit', icon: '🦋' },
+        { name: 'Swift', description: 'iOS native development', icon: '🍎' },
+        { name: 'Kotlin', description: 'Android native development', icon: '🤖' },
+        { name: 'Expo', description: 'React Native development platform', icon: '🚀' },
+        { name: 'Firebase', description: 'Backend-as-a-Service platform', icon: '🔥' }
       ]
     },
     cloud: {
       title: 'Cloud & DevOps',
       description: 'Scalable cloud infrastructure and deployment',
       techs: [
-        { name: 'AWS', level: 88, description: 'Amazon Web Services' },
-        { name: 'Vercel', level: 95, description: 'Frontend deployment platform' },
-        { name: 'Netlify', level: 90, description: 'JAMstack deployment' },
-        { name: 'GitHub Actions', level: 85, description: 'CI/CD automation' },
-        { name: 'Kubernetes', level: 75, description: 'Container orchestration' },
-        { name: 'Terraform', level: 70, description: 'Infrastructure as code' }
+        { name: 'AWS', description: 'Amazon Web Services', icon: '☁️' },
+        { name: 'Vercel', description: 'Frontend deployment platform', icon: '▲' },
+        { name: 'Netlify', description: 'JAMstack deployment', icon: '🌐' },
+        { name: 'GitHub Actions', description: 'CI/CD automation', icon: '⚙️' },
+        { name: 'Kubernetes', description: 'Container orchestration', icon: '☸️' },
+        { name: 'Terraform', description: 'Infrastructure as code', icon: '🏗️' }
       ]
     }
   }
@@ -110,28 +110,25 @@ const TechnologiesSection = () => {
                 key={index}
                 className="group p-6 bg-[#0D1117] rounded-xl border border-[#2d3748] hover:border-[#00BFFF] transition-all duration-300 transform hover:scale-105"
               >
-                {/* Tech Name */}
-                <div className="flex justify-between items-center mb-4">
+                {/* Tech Icon and Name */}
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="text-3xl transform group-hover:scale-110 transition-transform duration-300">
+                    {tech.icon}
+                  </div>
                   <h4 className="text-xl font-bold text-white group-hover:text-[#00BFFF] transition-colors duration-300">
                     {tech.name}
                   </h4>
-                  <span className="text-[#00FFC6] font-bold">
-                    {tech.level}%
-                  </span>
-                </div>
-
-                {/* Progress Bar */}
-                <div className="w-full bg-[#2d3748] rounded-full h-2 mb-4 overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${tech.level}%` }}
-                  ></div>
                 </div>
 
                 {/* Description */}
                 <p className="text-[#A9B2BA] text-sm leading-relaxed">
                   {tech.description}
                 </p>
+
+                {/* Hover indicator */}
+                <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-full h-1 bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] rounded-full"></div>
+                </div>
               </div>
             ))}
           </div>
