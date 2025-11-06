@@ -108,7 +108,7 @@ const StatsSection = () => {
   ]
 
   return (
-    <section id="stats-section" className="py-32 px-6 bg-gradient-to-br from-[#161b22] to-[#0D1117] relative overflow-hidden">
+    <section id="stats-section" className="py-10 px-6 bg-gradient-to-br from-[#161b22] to-[#0D1117] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#00BFFF]/20 to-transparent"></div>
@@ -117,8 +117,8 @@ const StatsSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 font-['Space_Grotesk'] leading-none">
+        <div className="text-center mb-8">
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-4 font-['Space_Grotesk'] leading-none">
             Our <span className="bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] bg-clip-text text-transparent">Impact</span>
           </h2>
           <p className="text-xl md:text-2xl text-[#A9B2BA] max-w-3xl mx-auto leading-relaxed">
@@ -127,19 +127,19 @@ const StatsSection = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="group text-center p-8 bg-[#0D1117] rounded-2xl border border-[#2d3748] hover:border-[#00BFFF] transition-all duration-500 transform hover:scale-105"
+              className="group text-center p-6 bg-[#0D1117] rounded-2xl border border-[#2d3748] hover:border-[#00BFFF] transition-all duration-500 transform hover:scale-105"
             >
               {/* Icon */}
-              <div className="text-[#00BFFF] group-hover:text-[#00FFC6] mb-6 flex justify-center transition-colors duration-300">
+              <div className="text-[#00BFFF] group-hover:text-[#00FFC6] mb-4 flex justify-center transition-colors duration-300">
                 {stat.icon}
               </div>
 
               {/* Number */}
-              <div className="mb-4">
+              <div className="mb-3">
                 <span className="text-5xl md:text-6xl font-black text-white group-hover:text-[#00BFFF] transition-colors duration-300">
                   {stat.number}
                 </span>
@@ -149,7 +149,7 @@ const StatsSection = () => {
               </div>
 
               {/* Label */}
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#00BFFF] transition-colors duration-300">
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#00BFFF] transition-colors duration-300">
                 {stat.label}
               </h3>
 

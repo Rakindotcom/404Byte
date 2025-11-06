@@ -150,7 +150,7 @@ const Reviews = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="py-20 px-6 relative z-10">
+      <section className="py-8 px-6 relative z-10">
         <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 font-['Space_Grotesk'] leading-none">
             Client <span className="bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] bg-clip-text text-transparent">Reviews</span>
@@ -175,7 +175,7 @@ const Reviews = () => {
       </section>
 
       {/* Featured Review Carousel */}
-      <section className="px-6 mb-16 relative z-10">
+      <section className="px-6 mb-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="bg-gradient-to-br from-[#161b22] to-[#1a1f2e] rounded-3xl p-8 md:p-12 border border-[#2d3748] relative overflow-hidden">
             {/* Background decoration */}
@@ -284,9 +284,9 @@ const Reviews = () => {
       </section>
 
       {/* All Reviews Grid */}
-      <section className="px-6 mb-16 relative z-10">
+      <section className="px-6 mb-8 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center font-['Space_Grotesk']">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center font-['Space_Grotesk']">
             All Client <span className="bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] bg-clip-text text-transparent">Testimonials</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -330,7 +330,7 @@ const Reviews = () => {
       </section>
 
       {/* Trust Indicators */}
-      <section className="px-6 mb-16 relative z-10">
+      <section className="px-6 mb-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center p-6 bg-[#161b22] rounded-xl border border-[#2d3748] hover:border-[#00BFFF] transition-all duration-300 transform hover:scale-105">
@@ -354,7 +354,7 @@ const Reviews = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6 relative z-10">
+      <section className="py-8 px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-[#161b22] to-[#1a1f2e] rounded-3xl p-12 border border-[#2d3748]">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-['Space_Grotesk']">
             Ready to Join Our <span className="bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] bg-clip-text text-transparent">Success Stories?</span>

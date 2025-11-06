@@ -89,7 +89,7 @@ const About = () => {
   return (
     <div className="pt-16 min-h-screen bg-[#0D1117]">
       {/* Hero Section */}
-      <section className="py-20 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className={`text-5xl md:text-6xl font-bold text-white mb-6 font-['Space_Grotesk'] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             About <span className="gradient-text">404Byte</span>
@@ -101,7 +101,7 @@ const About = () => {
       </section>
 
       {/* Company Overview */}
-      <section className="py-16 px-6 bg-[#161b22]">
+      <section className="py-8 px-6 bg-[#161b22]">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -130,7 +130,7 @@ const About = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-16 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="p-8 bg-[#161b22] rounded-xl border border-[#2d3748] hover:border-[#00BFFF] transition-colors duration-300">
@@ -157,10 +157,10 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-16 px-6 bg-[#161b22]">
+      <section className="py-8 px-6 bg-[#161b22]">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Space_Grotesk']">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 font-['Space_Grotesk']">
               Core Values
             </h2>
             <p className="text-lg text-[#A9B2BA] max-w-2xl mx-auto">
@@ -186,17 +186,17 @@ const About = () => {
       </section>
 
       {/* Our Approach */}
-      <section className="py-16 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Space_Grotesk']">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 font-['Space_Grotesk']">
               Our Approach
             </h2>
             <p className="text-lg text-[#A9B2BA] max-w-2xl mx-auto">
               A systematic process that ensures project success
             </p>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-6">
             {approach.map((item, index) => (
               <div key={index} className="flex items-start gap-6 p-6 bg-[#161b22] rounded-xl border border-[#2d3748] hover:border-[#00FFC6] transition-colors duration-300">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] rounded-full flex items-center justify-center text-[#0D1117] font-bold">
@@ -217,22 +217,22 @@ const About = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 px-6 bg-[#161b22]">
+      <section className="py-8 px-6 bg-[#161b22]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-['Space_Grotesk']">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Space_Grotesk']">
             Why Choose 404Byte?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 bg-[#0D1117] rounded-xl border border-[#2d3748]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-4 bg-[#0D1117] rounded-xl border border-[#2d3748]">
               <p className="text-[#A9B2BA]">Comprehensive services from digital development to media production</p>
             </div>
-            <div className="p-6 bg-[#0D1117] rounded-xl border border-[#2d3748]">
+            <div className="p-4 bg-[#0D1117] rounded-xl border border-[#2d3748]">
               <p className="text-[#A9B2BA]">Innovative solutions driven by technology and creativity</p>
             </div>
-            <div className="p-6 bg-[#0D1117] rounded-xl border border-[#2d3748]">
+            <div className="p-4 bg-[#0D1117] rounded-xl border border-[#2d3748]">
               <p className="text-[#A9B2BA]">Focused on results, growth, and client satisfaction</p>
             </div>
-            <div className="p-6 bg-[#0D1117] rounded-xl border border-[#2d3748]">
+            <div className="p-4 bg-[#0D1117] rounded-xl border border-[#2d3748]">
               <p className="text-[#A9B2BA]">Commitment to long-term partnerships and scalable solutions</p>
             </div>
           </div>
@@ -240,12 +240,12 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-[#161b22] to-[#1a1f2e] rounded-3xl p-12 border border-[#2d3748]">
+      <section className="py-8 px-6">
+        <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-[#161b22] to-[#1a1f2e] rounded-3xl p-8 border border-[#2d3748]">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Space_Grotesk']">
             Ready to Work With Us?
           </h2>
-          <p className="text-lg text-[#A9B2BA] mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-[#A9B2BA] mb-6 max-w-2xl mx-auto">
             Let's discuss how our values and expertise can help transform your business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -13,7 +13,7 @@ const ServicesSection = () => {
       services: ["Web Development", "App Development", "SaaS Solutions", "POS Systems"],
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
         </svg>
       ),
       color: "#00BFFF"
@@ -25,7 +25,7 @@ const ServicesSection = () => {
       services: ["UI/UX Design", "Brand Identity", "Graphics Design"],
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
         </svg>
       ),
       color: "#00FFC6"
@@ -37,7 +37,7 @@ const ServicesSection = () => {
       services: ["Brand Strategy", "Digital Marketing", "SEO Optimization", "Content Creation"],
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
         </svg>
       ),
       color: "#00BFFF"
@@ -49,14 +49,14 @@ const ServicesSection = () => {
       services: ["Video Production", "Motion Graphics", "Photography", "Animation"],
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
         </svg>
       ),
       color: "#00FFC6"
     }
   ]
 
-  const handleServiceClick = (serviceId) => {
+  const handleServiceClick = () => {
     navigate('/services')
   }
 
@@ -65,7 +65,7 @@ const ServicesSection = () => {
   }
 
   return (
-    <section className="py-24 px-6 bg-[#0D1117] relative overflow-hidden">
+    <section className="py-8 px-6 bg-[#0D1117] relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#00BFFF]/10 to-transparent"></div>
@@ -74,8 +74,8 @@ const ServicesSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 md:mb-8 font-['Space_Grotesk'] tracking-tight px-4">
+        <div className="text-center mb-6 md:mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 md:mb-6 font-['Space_Grotesk'] tracking-tight px-4">
             Our <span className="bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] bg-clip-text text-transparent">Services</span>
           </h2>
           <p className="text-lg md:text-xl text-[#A9B2BA] max-w-3xl mx-auto leading-relaxed px-4">
@@ -84,47 +84,44 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
           {services.map((service) => (
             <div
               key={service.id}
-              onClick={() => handleServiceClick(service.id)}
-              className={`group relative p-4 sm:p-6 md:p-8 rounded-2xl border transition-all duration-500 cursor-pointer transform hover:scale-105 ${
-                hoveredCard === service.id
-                  ? 'border-[#00BFFF] shadow-2xl shadow-[#00BFFF]/25 bg-[#1a1f2e]'
-                  : 'border-[#2d3748] hover:border-[#00FFC6] bg-[#161b22]'
-              }`}
+              onClick={() => handleServiceClick()}
+              className={`group relative p-3 sm:p-4 md:p-6 rounded-2xl border transition-all duration-500 cursor-pointer transform hover:scale-105 ${hoveredCard === service.id
+                ? 'border-[#00BFFF] shadow-2xl shadow-[#00BFFF]/25 bg-[#1a1f2e]'
+                : 'border-[#2d3748] hover:border-[#00FFC6] bg-[#161b22]'
+                }`}
               onMouseEnter={() => setHoveredCard(service.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               {/* Glow effect */}
-              <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 ${
-                service.id % 2 === 0 ? 'bg-[#00FFC6]' : 'bg-[#00BFFF]'
-              }`}></div>
+              <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 ${service.id % 2 === 0 ? 'bg-[#00FFC6]' : 'bg-[#00BFFF]'
+                }`}></div>
 
               {/* Content */}
               <div className="relative z-10">
                 {/* Icon */}
-                <div className={`mb-6 p-4 rounded-xl inline-flex transition-all duration-300 ${
-                  hoveredCard === service.id 
-                    ? 'bg-gradient-to-br from-[#00BFFF] to-[#00FFC6] text-[#0D1117] scale-110' 
-                    : 'bg-[#0D1117] text-[#00BFFF] group-hover:text-[#00FFC6]'
-                }`}>
+                <div className={`mb-4 p-3 rounded-xl inline-flex transition-all duration-300 ${hoveredCard === service.id
+                  ? 'bg-gradient-to-br from-[#00BFFF] to-[#00FFC6] text-[#0D1117] scale-110'
+                  : 'bg-[#0D1117] text-[#00BFFF] group-hover:text-[#00FFC6]'
+                  }`}>
                   {service.icon}
                 </div>
 
                 {/* Category Title */}
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-3 md:mb-4 font-['Space_Grotesk'] group-hover:text-[#00BFFF] transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 md:mb-3 font-['Space_Grotesk'] group-hover:text-[#00BFFF] transition-colors duration-300">
                   {service.category}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[#A9B2BA] text-xs sm:text-sm mb-4 md:mb-6 leading-relaxed">
+                <p className="text-[#A9B2BA] text-xs sm:text-sm mb-3 md:mb-4 leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Services List */}
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-2 mb-4">
                   {service.services.map((item, index) => (
                     <li
                       key={index}
@@ -151,21 +148,21 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-[#161b22] to-[#1a1f2e] rounded-2xl md:rounded-3xl p-6 md:p-12 border border-[#2d3748]">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 font-['Space_Grotesk'] px-4">
+        <div className="text-center bg-gradient-to-r from-[#161b22] to-[#1a1f2e] rounded-2xl md:rounded-3xl p-4 md:p-6 border border-[#2d3748]">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4 font-['Space_Grotesk'] px-4">
             Ready to Transform Your Business?
           </h3>
-          <p className="text-base md:text-lg text-[#A9B2BA] mb-6 md:mb-8 max-w-2xl mx-auto px-4">
+          <p className="text-base md:text-lg text-[#A9B2BA] mb-3 md:mb-4 max-w-2xl mx-auto px-4">
             Let's discuss your project and create a custom solution that drives results
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
-            <button 
+            <button
               onClick={handleStartProject}
               className="px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] text-[#0D1117] font-bold rounded-xl hover:shadow-2xl hover:shadow-[#00BFFF]/25 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Project
             </button>
-            <button 
+            <button
               onClick={() => navigate('/portfolio')}
               className="px-6 md:px-8 py-3 md:py-4 border-2 border-[#00FFC6] text-[#00FFC6] font-bold rounded-xl hover:bg-[#00FFC6] hover:text-[#0D1117] transition-all duration-300 transform hover:scale-105"
             >

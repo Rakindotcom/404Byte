@@ -129,7 +129,7 @@ const Services = () => {
   return (
     <div className="pt-16 min-h-screen bg-[#0D1117]">
       {/* Hero Section */}
-      <section className="py-20 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-['Space_Grotesk']">
             Our <span className="gradient-text">Services</span>
@@ -141,7 +141,7 @@ const Services = () => {
       </section>
 
       {/* Services Navigation */}
-      <section className="px-6 mb-16">
+      <section className="px-6 mb-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {services.map((service, index) => (
@@ -163,10 +163,10 @@ const Services = () => {
       </section>
 
       {/* Active Service Details */}
-      <section className="px-6 mb-16">
+      <section className="px-6 mb-8">
         <div className="max-w-6xl mx-auto">
           <div className="bg-[#161b22] rounded-xl p-8 border border-[#2d3748]">
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <div className="text-[#00BFFF] mb-4 flex justify-center">{services[activeService].icon}</div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-['Space_Grotesk']">
                 {services[activeService].category}
@@ -201,7 +201,7 @@ const Services = () => {
       </section>
 
       {/* Technologies */}
-      <section className="py-16 px-6 bg-[#161b22]">
+      <section className="py-8 px-6 bg-[#161b22]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Space_Grotesk']">
@@ -225,7 +225,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Space_Grotesk']">
             Ready to Start Your Project?

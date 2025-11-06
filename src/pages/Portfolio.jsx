@@ -128,7 +128,7 @@ const Portfolio = () => {
   return (
     <div className="pt-16 min-h-screen bg-[#0D1117]">
       {/* Hero Section */}
-      <section className="py-20 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-['Space_Grotesk']">
             Our <span className="gradient-text">Portfolio</span>
@@ -140,9 +140,9 @@ const Portfolio = () => {
       </section>
 
       {/* Filter Buttons */}
-      <section className="px-6 mb-16">
+      <section className="px-6 mb-8">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
             {filters.map((filter) => (
               <button
                 key={filter.id}
@@ -161,7 +161,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="px-6 mb-16">
+      <section className="px-6 mb-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
@@ -210,9 +210,9 @@ const Portfolio = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-6 bg-[#161b22]">
+      <section className="py-8 px-6 bg-[#161b22]">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Space_Grotesk']">
               Project Statistics
             </h2>
@@ -239,7 +239,7 @@ const Portfolio = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Space_Grotesk']">
             Ready to Create Something Amazing?

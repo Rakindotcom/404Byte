@@ -4,7 +4,7 @@ const CTASection = () => {
   const navigate = useNavigate()
 
   return (
-    <section className="py-32 px-6 bg-gradient-to-br from-[#0D1117] via-[#161b22] to-[#0D1117] relative overflow-hidden">
+    <section className="py-10 px-6 bg-gradient-to-br from-[#0D1117] via-[#161b22] to-[#0D1117] relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00BFFF] opacity-10 rounded-full blur-3xl animate-pulse"></div>
@@ -22,21 +22,21 @@ const CTASection = () => {
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
         {/* Main CTA Content */}
-        <div className="mb-16">
-          <h2 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 font-['Space_Grotesk'] leading-none">
+        <div className="mb-8">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-4 font-['Space_Grotesk'] leading-none">
             Ready to <span className="bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] bg-clip-text text-transparent">Transform</span>
           </h2>
-          <h3 className="text-4xl md:text-6xl font-bold text-white mb-8 font-['Space_Grotesk']">
+          <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 font-['Space_Grotesk']">
             Your Digital Presence?
           </h3>
-          <p className="text-xl md:text-2xl text-[#A9B2BA] max-w-4xl mx-auto leading-relaxed mb-12">
+          <p className="text-lg md:text-xl text-[#A9B2BA] max-w-4xl mx-auto leading-relaxed mb-6">
             Join 85+ successful companies who trusted 404Byte to bring their digital vision to life. 
             Let's create something extraordinary together.
           </p>
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <button 
             onClick={() => navigate('/contact')}
             className="group relative px-12 py-6 bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] text-[#0D1117] font-bold text-xl rounded-2xl neon-glow transition-all duration-500 transform hover:scale-110 overflow-hidden"
@@ -59,7 +59,7 @@ const CTASection = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 bg-gradient-to-br from-[#00BFFF] to-[#00FFC6] rounded-full flex items-center justify-center mb-4">
               <svg className="w-8 h-8 text-[#0D1117]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,12 +92,12 @@ const CTASection = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="bg-gradient-to-r from-[#161b22] to-[#1a1f2e] rounded-3xl p-8 md:p-12 border border-[#2d3748]">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-8 font-['Space_Grotesk']">
+        <div className="bg-gradient-to-r from-[#161b22] to-[#1a1f2e] rounded-3xl p-4 md:p-6 border border-[#2d3748]">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 font-['Space_Grotesk']">
             Let's Discuss Your Project
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="text-center">
               <div className="w-12 h-12 bg-[#00BFFF] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-6 h-6 text-[#0D1117]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -127,7 +127,7 @@ const ProcessSection = () => {
   ]
 
   return (
-    <section className="py-32 px-6 bg-gradient-to-br from-[#161b22] to-[#0D1117] relative overflow-hidden">
+    <section className="py-10 px-6 bg-gradient-to-br from-[#161b22] to-[#0D1117] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#00BFFF]/20 to-transparent"></div>
@@ -136,8 +136,8 @@ const ProcessSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 font-['Space_Grotesk'] leading-none">
+        <div className="text-center mb-8">
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-4 font-['Space_Grotesk'] leading-none">
             Our <span className="bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] bg-clip-text text-transparent">Process</span>
           </h2>
           <p className="text-xl md:text-2xl text-[#A9B2BA] max-w-3xl mx-auto leading-relaxed">
@@ -146,14 +146,14 @@ const ProcessSection = () => {
         </div>
 
         {/* Process Steps */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Steps Navigation */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             {steps.map((step, index) => (
               <div
                 key={index}
                 onClick={() => setActiveStep(index)}
-                className={`group p-6 rounded-xl border cursor-pointer transition-all duration-300 transform hover:scale-105 ${
+                className={`group p-4 rounded-xl border cursor-pointer transition-all duration-300 transform hover:scale-105 ${
                   activeStep === index
                     ? 'bg-[#0D1117] border-[#00BFFF] shadow-lg shadow-[#00BFFF]/25'
                     : 'bg-[#0D1117] border-[#2d3748] hover:border-[#00FFC6]'
@@ -193,8 +193,8 @@ const ProcessSection = () => {
           </div>
 
           {/* Active Step Details */}
-          <div className="bg-[#0D1117] rounded-2xl p-8 border border-[#2d3748] sticky top-8">
-            <div className="flex items-center gap-4 mb-6">
+          <div className="bg-[#0D1117] rounded-2xl p-6 border border-[#2d3748] sticky top-8">
+            <div className="flex items-center gap-4 mb-4">
               <div className="w-16 h-16 bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] rounded-full flex items-center justify-center text-[#0D1117] font-bold text-xl">
                 {steps[activeStep].number}
               </div>
@@ -208,13 +208,13 @@ const ProcessSection = () => {
               </div>
             </div>
 
-            <p className="text-[#A9B2BA] mb-6 leading-relaxed">
+            <p className="text-[#A9B2BA] mb-4 leading-relaxed">
               {steps[activeStep].description}
             </p>
 
             {/* Details List */}
-            <div className="mb-6">
-              <h4 className="text-white font-semibold mb-3">What we do:</h4>
+            <div className="mb-4">
+              <h4 className="text-white font-semibold mb-2">What we do:</h4>
               <ul className="space-y-2">
                 {steps[activeStep].details.map((detail, index) => (
                   <li key={index} className="flex items-start gap-3 text-[#A9B2BA] text-sm">
@@ -226,7 +226,7 @@ const ProcessSection = () => {
             </div>
 
             {/* Duration and Deliverables */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t border-[#2d3748]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-[#2d3748]">
               <div>
                 <h4 className="text-[#00BFFF] font-semibold mb-2">Duration</h4>
                 <p className="text-[#A9B2BA] text-sm">{steps[activeStep].duration}</p>

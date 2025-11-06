@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
   }
 
   return (
-    <section className="py-32 px-6 bg-[#0D1117] relative overflow-hidden">
+    <section className="py-10 px-6 bg-[#0D1117] relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00BFFF] opacity-5 rounded-full blur-3xl animate-pulse"></div>
@@ -92,8 +92,8 @@ const TestimonialsSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 font-['Space_Grotesk'] leading-none">
+        <div className="text-center mb-8">
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-4 font-['Space_Grotesk'] leading-none">
             Client <span className="bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] bg-clip-text text-transparent">Success Stories</span>
           </h2>
           <p className="text-xl md:text-2xl text-[#A9B2BA] max-w-3xl mx-auto leading-relaxed">
@@ -102,16 +102,16 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Main Testimonial */}
-        <div className="bg-gradient-to-br from-[#161b22] to-[#1a1f2e] rounded-3xl p-8 md:p-12 border border-[#2d3748] mb-16 relative overflow-hidden">
+        <div className="bg-gradient-to-br from-[#161b22] to-[#1a1f2e] rounded-3xl p-4 md:p-6 border border-[#2d3748] mb-8 relative overflow-hidden">
           {/* Background decoration */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#00BFFF]/10 to-[#00FFC6]/10 rounded-full blur-3xl"></div>
           
           <div className="relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Testimonial Content */}
               <div>
                 {/* Stars */}
-                <div className="flex mb-6">
+                <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-6 h-6 text-[#00FFC6] mr-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -120,12 +120,12 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-xl md:text-2xl text-[#A9B2BA] mb-8 leading-relaxed italic">
+                <blockquote className="text-xl md:text-2xl text-[#A9B2BA] mb-6 leading-relaxed italic">
                   "{testimonials[currentTestimonial].testimonial}"
                 </blockquote>
 
                 {/* Client Info */}
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-[#00BFFF] to-[#00FFC6] rounded-full flex items-center justify-center text-[#0D1117] font-bold text-lg">
                     {testimonials[currentTestimonial].avatar}
                   </div>
@@ -148,8 +148,8 @@ const TestimonialsSection = () => {
               </div>
 
               {/* Results */}
-              <div className="bg-[#0D1117] rounded-2xl p-8 border border-[#2d3748]">
-                <h4 className="text-2xl font-bold text-white mb-6 font-['Space_Grotesk']">
+              <div className="bg-[#0D1117] rounded-2xl p-6 border border-[#2d3748]">
+                <h4 className="text-2xl font-bold text-white mb-4 font-['Space_Grotesk']">
                   Project Results
                 </h4>
                 <div className="space-y-4">
@@ -164,7 +164,7 @@ const TestimonialsSection = () => {
             </div>
 
             {/* Navigation */}
-            <div className="flex justify-center items-center mt-8 gap-4">
+            <div className="flex justify-center items-center mt-6 gap-4">
               <button 
                 onClick={prevTestimonial}
                 className="p-3 text-[#A9B2BA] hover:text-[#00BFFF] transition-colors duration-300 hover:bg-[#2d3748] rounded-full"
@@ -199,8 +199,8 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center p-6 bg-[#161b22] rounded-xl border border-[#2d3748]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="text-center p-4 bg-[#161b22] rounded-xl border border-[#2d3748]">
             <div className="text-3xl font-bold text-[#00BFFF] mb-2">98%</div>
             <div className="text-[#A9B2BA] text-sm">Client Satisfaction</div>
           </div>

@@ -39,10 +39,10 @@ const ServicesSection = () => {
   ]
 
   return (
-    <section className="py-20 px-6 bg-[#0D1117]">
+    <section className="py-12 px-6 bg-[#0D1117]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-['Space_Grotesk']">
             Our <span className="gradient-text">Services</span>
           </h2>
@@ -111,7 +111,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-10">
           <button className="px-8 py-4 bg-gradient-to-r from-[#00BFFF] to-[#00FFC6] text-[#0D1117] font-semibold rounded-lg hover:shadow-lg hover:shadow-[#00BFFF]/25 transition-all duration-300 transform hover:scale-105">
             Start Your Project
           </button>

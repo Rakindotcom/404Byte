@@ -89,7 +89,7 @@ const Contact = () => {
   return (
     <div className="pt-16 min-h-screen bg-[#0D1117]">
       {/* Hero Section */}
-      <section className="py-20 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-['Space_Grotesk']">
             Get In <span className="gradient-text">Touch</span>
@@ -101,7 +101,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="px-6 mb-16">
+      <section className="px-6 mb-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
@@ -125,7 +125,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="px-6 mb-16">
+      <section className="px-6 mb-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -292,9 +292,9 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-6 bg-[#161b22]">
+      <section className="py-8 px-6 bg-[#161b22]">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Space_Grotesk']">
               Frequently Asked Questions
             </h2>
