@@ -143,19 +143,19 @@ const Services = () => {
       {/* Services Navigation */}
       <section className="px-6 mb-8">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 md:gap-4 mb-12">
             {services.map((service, index) => (
               <button
                 key={service.id}
                 onClick={() => setActiveService(index)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                className={`px-4 md:px-6 py-4 md:py-3 rounded-xl md:rounded-lg font-semibold transition-all duration-300 text-sm md:text-base flex flex-col md:flex-row items-center justify-center gap-2 min-h-[100px] md:min-h-0 ${
                   activeService === index
-                    ? 'bg-[#00BFFF] text-[#0D1117]'
-                    : 'bg-[#161b22] text-[#A9B2BA] hover:bg-[#2d3748] hover:text-[#00FFC6]'
+                    ? 'bg-gradient-to-br from-[#00BFFF] to-[#00FFC6] text-[#0D1117] shadow-lg'
+                    : 'bg-[#161b22] text-[#A9B2BA] hover:bg-[#2d3748] hover:text-[#00FFC6] border border-[#2d3748]'
                 }`}
               >
-                <span className="mr-2">{service.icon}</span>
-                {service.category}
+                <span className={`${activeService === index ? 'scale-110' : ''} transition-transform duration-300`}>{service.icon}</span>
+                <span className="text-center leading-tight">{service.category}</span>
               </button>
             ))}
           </div>

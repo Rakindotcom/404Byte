@@ -22,7 +22,7 @@ const Footer = () => {
         {/* Mobile Compact Layout */}
         <div className="block md:hidden">
           {/* Brand Row */}
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center justify-around mb-3">
             <button onClick={() => handleNavigation('/')} className="flex items-center group">
               <img
                 src="/logo.png"
